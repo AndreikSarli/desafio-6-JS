@@ -115,7 +115,7 @@ class Carousel {
 carouselArr.push(
   new Carousel(
     "img/imagem_1.jpg",
-    "Esta é a nova Ranger Ford 2022",
+    "Esta é a nova Ford Ranger 2022",
     "lancamento.html",
   ),
 );
