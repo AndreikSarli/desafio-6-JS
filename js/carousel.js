@@ -25,7 +25,7 @@ class Carousel {
     const dots = document.querySelectorAll(".dot");
     dots.forEach((dot) => {
       dot.addEventListener("click", () => {
-        Carousel.GoTo(Number(dot.dataset.index));
+        Carousel.IrPara(Number(dot.dataset.index));
       });
     });
 
@@ -33,7 +33,7 @@ class Carousel {
     const thumbs = document.querySelectorAll(".miniatura");
     thumbs.forEach((thumb) => {
       thumb.addEventListener("click", () => {
-        Carousel.GoTo(Number(thumb.dataset.index));
+        Carousel.IrPara(Number(thumb.dataset.index));
       });
     });
 
@@ -44,10 +44,30 @@ class Carousel {
   }
 
   // Ir pro slide
-  static GoTo(i) {
+  static IrPara(i) {
     Carousel._sequence = i;
     Carousel._firstLoad = false; // Ativar animação
     Carousel.Next(true);
+    clearInterval(Carousel._interval); // Resetar o tempo do auto play
+    Carousel._interval = setInterval(function () {
+      // Reiniciar o auto play
+      Carousel.Next();
+    }, 5000);
+
+    // Parar auto play ao passar o mouse
+    const carouselContainer = document.querySelector(".imagem-home");
+
+    carouselContainer.addEventListener("mouseenter", () => {
+      clearInterval(Carousel._interval);
+    });
+
+    carouselContainer.addEventListener("mouseleave", () => {
+      clearInterval(Carousel._interval);
+
+      Carousel._interval = setInterval(() => {
+        Carousel.Next();
+      }, 5000);
+    });
   }
 
   static Next(skipAuto = false) {
