@@ -40,7 +40,7 @@ class Carousel {
     // Auto play
     Carousel._interval = setInterval(function () {
       Carousel.Next();
-    }, 6000);
+    }, 5000);
   }
 
   // Ir pro slide
