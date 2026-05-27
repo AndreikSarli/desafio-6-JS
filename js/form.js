@@ -30,6 +30,7 @@ function Enviar(event) {
 
   console.log(contato);
   event.target.reset(); // Limpar o formulário após o envio
+  botaoEnviar.disabled = true; // Desabilitar o botão após o envio
 }
 
 // Telefone 
@@ -89,4 +90,11 @@ cpfInput.addEventListener("input", function (e) {
   }
 // Atualizar o valor do campo CPF
   e.target.value = valor;
+});
+
+// Aceite do termo de uso
+const checkboxTermos = document.getElementById("aceite-termos");
+const botaoEnviar = document.getElementById("btn-enviar");
+checkboxTermos.addEventListener("change", function () {
+  botaoEnviar.disabled = !checkboxTermos.checked;
 });

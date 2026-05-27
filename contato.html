@@ -24,7 +24,8 @@
     <main class="contato">
       <section class="formulario-contato">
         <div class="img-formulario">
-        <img src="img/xls 2.2 diesel.jpg" alt="Imagem Ranger XLS 2.2 " /></div>
+          <img src="img/xls 2.2 diesel.jpg" alt="Imagem Ranger XLS 2.2 " />
+        </div>
         <form onsubmit="Enviar(event)">
           <h2>Sobre você</h2>
           <input
@@ -52,7 +53,14 @@
             required
           />
           <label for="email"></label>
-          <input type="text" placeholder="CPF *" id="cpf" name="cpf" maxlength="14" required />
+          <input
+            type="text"
+            placeholder="CPF *"
+            id="cpf"
+            name="cpf"
+            maxlength="14"
+            required
+          />
           <label for="tipo"></label>
           <select id="tipo" name="tipo" required>
             <option value="" disabled selected>TIPO DE CONTATO</option>
@@ -67,8 +75,38 @@
             name="mensagem"
             required
           ></textarea>
+          <p class="texto-lgpd">
+            Os dados serão mantidos em nossa base de dados, só enquanto for
+            desejado por você. A qualquer momento, será possível editar ou
+            remover tais dados.
+
+            <a
+              href="https://www.ford.com.br/politica-de-privacidade/ "
+              target="_blank"
+              rel="noopener noreferrer"
+              >Termos e Condições</a
+            >
+          </p>
+
+          <label class="checkbox-lgpd">
+            <input type="checkbox" id="aceite-termos" />
+            Sim. Li e concordo com os termos
+          </label>
+
+          <label class="checkbox-lgpd">
+            <input type="checkbox" id="receber-promocoes" />
+            Sim. Também quero receber descontos e novidades.
+          </label>
+
           <div class="area-botao">
-          <button class="btn-formulario" type="submit">Enviar</button>
+            <button
+              class="btn-formulario"
+              type="submit"
+              id="btn-enviar"
+              disabled
+            >
+              Enviar
+            </button>
           </div>
         </form>
       </section>
@@ -104,7 +142,7 @@
         class="copyright"
         >© 2026 Ford Motor Company - Todos os direitos reservados</a
       >
-         <a
+      <a
         href="https://www.ford.com.br/copyright/"
         target="_blank"
         rel="noopener noreferrer"
