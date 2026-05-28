@@ -679,7 +679,7 @@ select {
   margin-bottom: 14px;
   margin-left: 3.7px;
   font-size: 12px;
-  line-height: 1.0;
+  line-height: 1.2;
   text-align: justify;
   color: #2c3da0;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -692,10 +692,12 @@ select {
   color: #135bf7;
   text-decoration: none;
   font-weight: 700;
+  transition: color 0.3s ease-in-out;
+  margin-left: 4px;
 }
 
 .texto-lgpd a:hover {
-  text-decoration: underline;
+  color: #1b3572;
 }
 
 .checkbox-lgpd{
