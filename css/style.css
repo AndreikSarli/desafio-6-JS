@@ -688,18 +688,6 @@ select {
 }
 
 
-.texto-lgpd a {
-  color: #135bf7;
-  text-decoration: none;
-  font-weight: 700;
-  transition: color 0.3s ease-in-out;
-  margin-left: 4px;
-}
-
-.texto-lgpd a:hover {
-  color: #1b3572;
-}
-
 .checkbox-lgpd{
   display: flex;
   align-items: center;
@@ -715,6 +703,17 @@ select {
   transform: scale(1.3);
   accent-color: #2c3da0;
   margin-left: 5.95px;
+}
+
+.checkbox-lgpd a{
+  color: #135bf7;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease-in-out;
+  margin-left: 4px;
+}
+.checkbox-lgpd a:hover {
+  color: #1b3572;
 }
 
 .btn-formulario:disabled {
